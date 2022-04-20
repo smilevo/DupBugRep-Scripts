@@ -89,13 +89,12 @@
 In this context, their automatic detection becomes a necessary task that can help prevent frequently fixing the same bug.</p> 
 
 <p><strong>Objective:</strong>
-In this paper, we propose \app, a novel pre-trained language model using Bidirectional Encoder Representations from Transformers (BERT) for duplicate bug report detection with the aim of improving the detection rate compared to existing works.</p> 
+In this paper, we propose BERT-MLP, a novel pre-trained language model using Bidirectional Encoder Representations from Transformers (BERT) for duplicate bug report detection with the aim of improving the detection rate compared to existing works.</p>
 
 <p><strong>Method:</strong>
 Our approach considers only unstructured data. These are fed into the BERT model in order to learn the contextual relationships between words. The output is fed into a Multi-Layer Perceptron (MLP) classifier, which represents our base duplicate bug report detector.</p> 
 
-<p><strong>Results:</strong> Our approach was evaluated on three projects: Mozilla Firefox, Eclipse Platform and Thunderbird. 
-It achieved an accuracy of 92.11\%, 94.08\% and 89.03\% respectively for Mozilla, Eclipse and Thunderbird. A comparison with a Word2Vec-based model, a Dual-Channel Convolutional Neural Network (DC-CNN) model \cite{xxia20} and other pre-trained models, namely RoBERTa and DistilBERT has been  conducted. Results showed that \app outperformed, the second best performing model (DC-CNN) by 12\% in accuracy for Eclipse and 9\% for both Mozilla and Thunderbird, respectively. We have also shown that \app is more robust that DC-CNN in terms of overfitting.</p>
+<p><strong>Results:</strong> Our approach was evaluated on three projects: Mozilla Firefox, Eclipse Platform and Thunderbird. It achieved an accuracy of 92.11%, 94.08% and 89.03% respectively for Mozilla, Eclipse and Thunderbird. A comparison with a Dual- Channel Convolutional Neural Network (DC-CNN) model and other pre-trained models, including RoBERTa and Sentence-Bert has been conducted. Results showed that BERT-MLP outper- formed, the second best performing model (DC-CNN) by 12% in accuracy for Eclipse and 9% for both Mozilla and Thunderbird, respectively.</p>
 		  
 <!--
 <div style="text-align: center" >
