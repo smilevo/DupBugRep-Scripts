@@ -1,0 +1,33 @@
+Script to extract DC_CNN features:
+
+
+// Test_Features
+
+features_layer = Model(inputs=model.inputs,outputs=model.get_layer(name="concatenate_1").output)
+
+print(features_layer)
+features_layer.compile(optimizer='adam', loss='binary_crossentropy' , metrics=['accuracy'])
+features=features_layer.predict(test)
+print(features)
+
+///
+
+'Creation fichier features'
+test_labels=pd.DataFrame(test_labels)
+test_labels.to_csv('/content/gdrive/MyDrive/test_labels.csv')
+
+
+// Train_Features
+
+features_layer = Model(inputs=model.inputs,outputs=model.get_layer(name="concatenate_1").output)
+
+print(features_layer)
+features_layer.compile(optimizer='adam', loss='binary_crossentropy' , metrics=['accuracy'])
+features=features_layer.predict(train)
+print(features)
+
+///
+
+'Creation fichier features'
+test_labels=pd.DataFrame(train_labels)
+test_labels.to_csv('/content/gdrive/MyDrive/train_labels.csv')
